@@ -33,7 +33,10 @@ function Layout (props) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
   config: PropTypes.shape({
     title: PropTypes.string,
     mainNavigation: PropTypes.arrayOf(PropTypes.object),
